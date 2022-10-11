@@ -1,0 +1,13 @@
+
+<div >
+  {{#if productos.length}}
+    {{#each productos}}
+      <div >
+          {{> productoCard }}
+      </div>
+    {{/each}}
+  {{else}}
+    <p>No tenemos productos</p>
+  {{/if}}
+
+</div>

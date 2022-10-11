@@ -1,6 +1,7 @@
 import { Container } from "./containers/Container.js"
 
-const express = require("express");
+// const express = require("express");
+import express from "express";
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -20,8 +21,6 @@ const randomFunction=(limite) => {
 
 app.get("/productos", (req, res) => {
   ProductContainer.getAll()
-   .then( lista=>
-    JSON.parse(lista))
     .then( listaParse=>{
     res.json(listaParse)
   })
@@ -29,9 +28,6 @@ app.get("/productos", (req, res) => {
 
 app.get("/productosRandom", (req, res) => {
   ProductContainer.getAll()
-    .then( lista =>
-    JSON.parse(lista)
-  )
     .then(listaParse =>
     listaParse[randomFunction(listaParse.length)]
   )
