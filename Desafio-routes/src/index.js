@@ -1,28 +1,25 @@
 import express from "express";
-import {create} from "express-handlebars";
-
-import homeRoutes from "./routes/home.js";
-import productRoutes from "./routes/productos.js";
+import handlebars from "express-handlebars";
+import { productRouter } from "./routers/ProductRouter.js";
+import { viewsRouter } from "./routers/ViewsRouter.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const hbs = create({
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
+
+app.engine("hbs", handlebars.engine({
     extname: ".hbs",
-    helpers: {
-    }
- });
+    defaultLayout: "main.hbs",
+}));
+
+app.set("view engine", "hbs");
+app.set("views","./views");
 
 
-app.engine(".hbs", hbs.engine);
-app.set("view engine", ".hbs");
-app.set("views","./views")
-
-app.use(express.static('public'));
-// app.use('/static', express.static('public'));
-
-app.use("/", homeRoutes);
-app.use("/productos", productRoutes);
+app.use("/", viewsRouter);
+app.use("/api/productos", productRouter);
 
 
 const server = app.listen( PORT, () => console.log(`Server listening on PORT ${PORT}`))
