@@ -1,5 +1,6 @@
 import express from "express";
 import handlebars from "express-handlebars";
+import __dirname from "./dirname.js";
 import { productRouter } from "./routers/ProductRouter.js";
 import { viewsRouter } from "./routers/ViewsRouter.js";
 
@@ -15,7 +16,7 @@ app.engine("hbs", handlebars.engine({
 }));
 
 app.set("view engine", "hbs");
-app.set("views","./views");
+app.set("views", __dirname + "/views");
 
 
 app.use("/", viewsRouter);
