@@ -1,0 +1,32 @@
+[
+   {
+      "title": "Sandwich de pollo",
+      "description": "Sandwich con pan casero de pollo y mayonesa cesar",
+      "code": "s150",
+      "thumbnail": "https://trigodeoro.com.pe/wp-content/uploads/2020/08/MINI-POLLO-DESHILACHADO.jpg",
+      "price": 1200,
+      "stock": 50,
+      "timestamp": "1/11/2022 15:21:07",
+      "id": 4
+   },
+   {
+      "title": "Alfajores de Maicena",
+      "description": "Alfajor casero con Dulce de leche artesanal",
+      "code": "a001",
+      "thumbnail": "https://res.cloudinary.com/dniiru5xy/image/upload/c_thumb,f_auto,q_60,w_900,h_600,q_auto:low/v1577283800/resopia.com/alfajores-maicena-2.jpg",
+      "price": 500,
+      "stock": 20,
+      "timestamp": "1/11/2022 15:46:37",
+      "id": 5
+   },
+   {
+      "title": "Alfajores de chocolate",
+      "description": "Alfajor casero con chocolate amargo",
+      "code": "a002",
+      "thumbnail": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/145/094/products/img_88841-dee5401767709211d715931010552878-1024-1024.jpg",
+      "price": 700,
+      "stock": 20,
+      "timestamp": "1/11/2022 20:49:21",
+      "id": 6
+   }
+]
