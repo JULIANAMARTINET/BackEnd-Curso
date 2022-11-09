@@ -36,6 +36,7 @@ const createProductTable = async (products) => {
 
 
 // ------- MENSAJERIA------
+
 function enviarMensaje() {
   const email = document.getElementById("email");
   const mensaje = document.getElementById("mensaje");

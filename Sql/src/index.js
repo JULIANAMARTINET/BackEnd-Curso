@@ -1,5 +1,4 @@
 import express from "express";
-import __dirname from "./dirname.js";
 import { ProductApi, MessagesApi } from "./Api/index.js"
 import { Server as HttpServer } from 'http'
 import {Server as IOServer} from 'socket.io'

@@ -17,4 +17,4 @@ const MessagesApi =
     ? new ContainerFs(MESSAGES_FILENAME)
     : new Container();
 
-export { ProductApi, MessagesApi };
+export {ProductApi, MessagesApi};
