@@ -31,7 +31,7 @@ router.post("/:cartId/products", async (req, res) => {
   res.send({ success: true, cart: updateCart });
 });
 
-router.delete("/:cartId/products    /:id_prod", async (req, res) => {
+router.delete("/:cartId/products/:id_prod", async (req, res) => {
   try {
     const { cartId } = req.params;
     const { id_prod } = req.params;
