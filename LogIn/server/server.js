@@ -1,5 +1,5 @@
 // Requiring dotenv as early as possible in the application
-require('dotenv').config() // => Then we can use it anywhere in our Node project.
+require('dotenv').config()
 
 // Plain vanilla server with express
 const express = require('express');
@@ -20,10 +20,6 @@ const session = require('express-session') // Another middleware, but in this ca
 const FileStore = require('session-file-store')(session) // Store session data persistently in JSON files
 const MongoStore = require('connect-mongo') // idem but store it in MongoDB
 const advancedOptions = {useNewUrlParser: true, useUnifiedTopology: true} // To connect to MongoDB Atlas
-
-// Login - Logout
-const passport = require('passport')
-const { initPassport } = require('../middlewares/passport') 
 
 // Data
 const { products } = require('../data/archiveData/index')
@@ -54,13 +50,8 @@ class Server {
         store: MongoStore.create({
             mongoUrl : `mongodb+srv://julianaMartinet:${process.env.MONGODB_PASSWORD}@cluster0.nsmqg9h.mongodb.net/Ecommerce?retryWrites=true&w=majority`, 
             mongoOptions: advancedOptions
-            })
-        }))
-      initPassport()
-      this.app.use(passport.initialize())
-      this.app.use(passport.session())
-      PORT=8080
-      SELECTED_DB=mongo
+        })
+    }))
     }
 
     routes() {
