@@ -24,7 +24,7 @@ http {
     server {
         listen 80;
         server_name nginx_node;
-        root "/Users/santy/Documents/Coderhouse Backend/Entregables/Entregable-14/public";
+        root "/Users/julianamartinet/Documents/Coderhouse Backend/Entregables/Entregable-14/public";
 
         location /datos/ {
             proxy_pass http://node_app;
